@@ -14,7 +14,7 @@ const WeatherApp = () => {
   useEffect(() => {
     const fetchDefaultWeather = async () => {
       setLoading(true)
-      const defaultLocation = 'Tbilisi'
+      const defaultLocation = 'Chennai'
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${defaultLocation}&units=Metric&appid=${api_key}`
       const res = await fetch(url)
       const defaultData = await res.json()
@@ -154,6 +154,11 @@ const WeatherApp = () => {
             </div>
           </>
         )}
+      </div>
+      <div className="footer">
+        <p>
+          Designed & Developed By <span className="brand">Mohamed Althaf Hussain N</span>
+        </p>
       </div>
     </div>
   )
